@@ -15,7 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </ul>
   </nav>
   <pre>
-    <code>{{ user. }}</code>
+    <code>{{ user.sub }}</code>
   </pre>
   <RouterView />
 </template>
