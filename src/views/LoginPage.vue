@@ -2,10 +2,10 @@
   <center>
     <div class="app">
       <form action="POST">
-          <input type="email" class="InputField" placeholder="Email"/><br/><br/>
-          <input type="password" class="InputField" placeholder="Wachtwoord"/><br/>
-          <button type="submit" class="SubmitButton">Login</button>
-          <router-link type="submit" class="SubmitButton" to="/createaccount">CreateAccount</router-link>       
+        <input type="email" class="InputField" placeholder="Email"/><br/><br/>
+        <input type="password" class="InputField" placeholder="Wachtwoord"/><br/>
+        <button type="submit" class="SubmitButton">Login</button>
+        <router-link type="submit" class="SubmitButton" to="/createaccount">CreateAccount</router-link>
       </Form>
     </div>
   </center>
@@ -13,10 +13,8 @@
 
 <script>
 
-export default({
-  methods: {
-
-}
+export default ({
+  methods: {}
 })
 </script>
 
