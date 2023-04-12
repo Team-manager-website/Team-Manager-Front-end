@@ -18,7 +18,7 @@ jobs:
         node-version: [ 18.x ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    steps: 
+    steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
@@ -27,13 +27,9 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build --if-present
-      - name: Checkout to another branch
-        run: git checkout -b feature-branch
-      - name: Commit changes
-        run: git commit -m "commit message"
-      - name: Push changes to branch
-        run: git push origin feature-branch
-      - name: Merge changes into main branch
-        run: git merge feature-branch
-      - name: Push changes to main branch
-        run: git push origin main
+      - name: Push to master from fuature branch
+        if: success() && github.ref == 'refs/heads/master'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: fuature-branch
