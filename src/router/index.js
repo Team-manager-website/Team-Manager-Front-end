@@ -23,11 +23,14 @@ const router = createRouter({
             component: CreateFakeBankAccount
         },
         {
+<<<<<<< HEAD
             path: '/team',
             name: 'team',
             component: Team
         },
         {
+=======
+>>>>>>> d58ae27d8d7fa2b9cccef70da40f060e74b0a61c
             path: '/about',
             name: 'about',
             // route level code-splitting
