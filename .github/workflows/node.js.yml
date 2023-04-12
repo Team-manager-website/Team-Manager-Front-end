@@ -31,5 +31,5 @@ jobs:
         if: success() && github.ref == 'refs/heads/master'
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.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 }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: fuature-branch
