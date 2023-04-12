@@ -2,7 +2,7 @@
     <center>
       <div class="app">
         <input type="text" id="input" v-model="input" class="InputField" placeholder="Team Name"/><br/><br/>
-        <button @click="sendTeamName" type="submit" class="SubmitButton">Create Team</button>
+        <button @click="sendTeamName" type="submit" class="SubmitButton">Create Team</button> 
         <div v-if="response">{{ response }}</div>
       </div>
       <!-- <pre>
