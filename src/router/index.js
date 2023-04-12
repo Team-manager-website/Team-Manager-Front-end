@@ -2,6 +2,7 @@ import {createRouter, createWebHistory} from 'vue-router'
 import Login from '../views/HomeView.vue'
 import CreateAccount from '../views/CreateAccountPage.vue'
 import CreateFakeBankAccount from '../views/CreateFakeBankAccount.vue'
+import Team from '../views/Team.vue'
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +21,11 @@ const router = createRouter({
             path: '/createfbaccount',
             name: 'createfbaccount',
             component: CreateFakeBankAccount
+        },
+        {
+            path: '/team',
+            name: 'team',
+            component: Team
         },
         {
             path: '/about',
