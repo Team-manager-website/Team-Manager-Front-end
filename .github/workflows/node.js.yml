@@ -6,7 +6,7 @@ on:
   push:
     branches: [ "master" ]
   pull_request:
-    branches: [ "feature-branch" ]
+    branches: [ "master" ]
 
 jobs:
   build:
