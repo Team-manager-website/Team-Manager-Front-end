@@ -31,5 +31,5 @@ jobs:
         if: success()
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.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 }}
           branch: main
