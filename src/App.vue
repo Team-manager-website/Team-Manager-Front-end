@@ -30,8 +30,8 @@ export default {
       this.$auth0.loginWithPopup();
     },
     logout() {
-      this.$auth0.logout({logoutParams: {returnTo: window.location.origin}})
+      this.$auth0.logout({logoutParams: {returnTo: window.location.origin}});
     }
   }
 };
-</script>
+</script> 

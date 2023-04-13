@@ -35,7 +35,7 @@ export default {
     },
     checkIfUserIsLogedIn(){
       if(this.user == null){
-        this.$router.push('home')
+        this.$router.push('home');
       }
     }
   }
