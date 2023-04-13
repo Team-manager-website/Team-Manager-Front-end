@@ -24,7 +24,7 @@ const router = createRouter({
         },
         {
             path: '/team',
-            name: 'team',
+            name: 'team'
             component: Team
         },
         {
