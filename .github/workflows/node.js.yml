@@ -28,7 +28,7 @@ jobs:
       - run: npm ci
       - run: npm run build --if-present
       - name: Push to master from fuature branch
-        if: success() && github.ref == 'refs/heads/master'
+        if: success()'
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.CEDJES_TOKEN }}
