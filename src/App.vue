@@ -22,8 +22,8 @@ import "@auth0/auth0-vue";
 export default {
   data: function () {
     return {
-      user: this.$auth0.user
-    };
+      user: this.$aut
+    }
   },
   methods: {
     login() {
