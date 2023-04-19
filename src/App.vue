@@ -25,12 +25,19 @@ export default {
       user: this.$auth0.user
     };
   },
+  beforeMount(){
+    this.checkIfUserIsLogedInAndRegister();
+  },
   methods: {
     login() {
       this.$auth0.loginWithPopup();
     },
     logout() {
       this.$auth0.logout({logoutParams: {returnTo: window.location.origin}});
+    }, checkIfUserIsLogedInAndRegister(){
+      if(!this.user.sub){
+        this.$router.push('register');
+      }
     }
   }
 };
