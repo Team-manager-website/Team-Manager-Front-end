@@ -19,5 +19,6 @@ app.use(createAuth0({
     })
 )
 
+
 app.mount('#app')
 
