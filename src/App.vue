@@ -26,7 +26,7 @@ export default {
     };
   },
   beforeMount(){
-    this.checkIfUserIsLogedInAndRegister();
+    //this.checkIfUserIsLogedInAndRegister();
   },
   methods: {
     login() {

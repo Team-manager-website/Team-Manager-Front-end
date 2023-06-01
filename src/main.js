@@ -10,14 +10,16 @@ const app = createApp(App)
 
 app.use(router)
 
-app.use(createAuth0({
-        domain: "dev-gm2f3obz.us.auth0.com",
-        clientId: "xyWK0YGIFZ15zGVoyuqiIzrTvKr7innY",
-        authorizationParams: {
-            redirect_uri: window.location.origin
-        }
+app.use(
+    createAuth0({
+      domain: "dev-gm2f3obz.us.auth0.com",
+      clientId: "xyWK0YGIFZ15zGVoyuqiIzrTvKr7innY",
+      authorizationParams: {
+        redirect_uri: window.location.origin,
+        audience: "http://teammanager/api",
+      }
     })
-)
+  );
 
 
 app.mount('#app')

@@ -14,6 +14,7 @@
 <script>
 
 import { default as axios } from 'axios';
+
 //import { GetToken } from '../security/SecurityConfig.js'
 
 export default {
@@ -30,19 +31,13 @@ export default {
   },
   methods: {
     sendTeamName() {
-      // GetToken().then(data => {
-      //   console.log(data);
-      //   token = data;
-      // }).catch(error => {
-      //   console.error(error);
-      // });
-      // alert(token);
-      
-
     var option = {
-      method: 'GET',
-      url: 'http://localhost:8090/account/public',
-      headers: {authorization: `Bearer ${this.response}`}
+      method: 'POST',
+      url: 'api/team/CreateTeam',
+      data: {
+        input: this.input
+      },
+      headers: {authorization: `Bearer ${this.token}`}
     };
     console.log(option);
  
@@ -51,33 +46,6 @@ export default {
     }).catch(function (error) {
       console.error(error);
     });
-    
-    // fetch('http://localhost:8090/account/public', {
-    // headers: {
-    //   'Authorization': `Bearer ${this.response}`
-    // }
-    // })
-    // .then(response => {
-    //   if (response.ok) {
-    //     return response.json();
-    //   }
-    //   throw new Error('Network response was not ok.');
-    // })
-    // .then(data => {
-    //   console.log(data);
-    // }) 
-    // .catch(error => {
-    //   console.error('There was a problem with the fetch operation:', error);
-    // });
-
-    // axios.post('http://localhost:8090/team/CreateTeam', {
-    //     input: this.input,
-    //   }).then((response) => {
-    //     this.response = response.data;
-    //   }).catch((error) => {
-    //     console.error(error);
-    //   });
-
     },
     checkIfUserIsLogedIn(){
       if(this.user == null){
@@ -98,7 +66,7 @@ export default {
       };
 
       axios.request(options).then(response => {
-        this.response = response.data.access_token;
+        this.token = response.data.access_token;
       }).catch(error => {
         console.error(error);
       });
@@ -106,7 +74,7 @@ export default {
   },
   beforeMount(){ 
       this.getAccesToken();
-    } 
+  } 
 };
 </script>
   
