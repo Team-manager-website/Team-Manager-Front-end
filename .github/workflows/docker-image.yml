@@ -24,4 +24,3 @@ jobs:
 
     - name: Push image
       run: docker push cedje/teammanagerfrontend:team
-      
