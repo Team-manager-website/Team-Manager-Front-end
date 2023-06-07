@@ -1,6 +1,6 @@
 FROM node:12
 
-WORKDIR /the/workdir/path
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -8,10 +8,10 @@ RUN npm install
 
 COPY . .
 
-RUN npm install -g serve
+# RUN npm install -g serve
 
-ENV PORT=8080
+ENV PORT=5173
 
-EXPOSE 8080
+EXPOSE 5173
 
 CMD [ "npm", "run", "serve" ]
