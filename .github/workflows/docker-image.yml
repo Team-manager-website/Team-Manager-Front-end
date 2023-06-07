@@ -20,10 +20,9 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag cedje/teammanagerteammanagerfrontend:team
+      run: docker build . --file Dockerfile --tag cedje/teammanagerfrontend:team
 
     - name: Push image
       run: docker push cedje/teammanagerfrontend:team
       # dckr_pat_EHO5IMUB3HVl-Fg9sKFykGs4pRo
 
-      
