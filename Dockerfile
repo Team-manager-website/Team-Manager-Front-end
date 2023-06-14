@@ -16,4 +16,4 @@ ENV PORT=5173
 
 EXPOSE 5173
 
-CMD ["npm", "run", "serve"]
+CMD ["serve", "-s", "-l", "5173", "dist"]
