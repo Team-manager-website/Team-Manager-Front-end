@@ -4,8 +4,7 @@ WORKDIR /app
 
 COPY package*.json ./
 
-RUN npm install \
-          resize-observer-polyfill --save-dev
+RUN npm install
 
 COPY . .
 
